@@ -1,6 +1,6 @@
 <div align="center">
     <img
-        src="https://raw.githubusercontent.com/nginformatica/styleguide/master/.storybook/assets/logo.png"
+        src="src/assets/logo.png"
         width="200"
         alt="NGINFORMATICA"
 	/>
