@@ -18,7 +18,6 @@ jobs:
         registry-url: 'https://registry.npmjs.org'
     - run: |
         yarn
-        npm run pre:release
-        npm run release
+        yarn publish:alpha
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
