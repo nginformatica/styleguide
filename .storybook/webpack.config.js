@@ -9,7 +9,7 @@ module.exports = ({ config, mode }) => {
 
     config.resolve.extensions.push('.ts', '.tsx')
 
-    config.resolve.alias['@nginformatica/design-tokens'] = '../../src/index.ts'
+    config.resolve.alias['nginformatica-design-tokens'] = '../../src/index.ts'
 
     return config;
 };

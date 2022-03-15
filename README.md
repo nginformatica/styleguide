@@ -14,12 +14,12 @@ A repository to center and document, initially, the colors of the NGInformatica 
 > The package still in `alpha`
 
 ```sh
-$ npm i @nginformatica/styleguide
+$ npm i nginformatica-styleguide
 ```
 or
 
 ```sh
-$ yarn add @nginformatica/styleguide
+$ yarn add nginformatica-styleguide
 ```
 
 ## :books: `Usage`
@@ -31,7 +31,7 @@ The `work in progress` of the colors documentation is [here](https://nginformati
 Using the ThemeProvider of styled-components, the theme property will be injected into all styled-components below of it.
 
 ```tsx
-import { theme } from '@nginformatica/styleguide'
+import { theme } from 'nginformatica-styleguide'
 import styled, { ThemeProvider as StyledThemeProvider } from 'styled-components'
 
 type Kind = 'critical' | 'medium' | 'high' | 'minimal' | 'low' | 'neutral'
@@ -70,7 +70,7 @@ Extend the nginformatica theme in the default theme of `styled-components`
 ```typescript
 // eg.: src/types/styled.ts
 
-import { theme } from '@nginformatica/styleguide'
+import { theme } from 'nginformatica-styleguide'
 
 type Theme = typeof theme
 
