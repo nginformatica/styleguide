@@ -1,6 +1,6 @@
 <div align="center">
     <img
-        src="src/assets/logo.png"
+        src="https://user-images.githubusercontent.com/43145168/158388332-bb76d8c2-48ad-4f42-a017-6969a0abaa8c.png"
         width="200"
         alt="NGINFORMATICA"
 	/>
