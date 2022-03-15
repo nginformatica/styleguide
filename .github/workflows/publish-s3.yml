@@ -24,4 +24,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_ACCESS_SECRET }}
           aws-region: 'us-east-1'
       - name: Deploy to S3
-        run: aws s3 sync docs s3://styleguide.ngi.com.br --delete
+        run: aws s3 sync public s3://styleguide.ngi.com.br --delete
