@@ -1,4 +1,4 @@
-import { Priority, Feedback, Criticality } from './presets'
+import { Priority, Feedback, Criticality, Graphically } from './presets'
 
 const neutral = {
     black: '#000',
@@ -64,10 +64,6 @@ const priority: Record<Priority, { main: string; light: string }> = {
         main: '#8BC34A',
         light: '#E9F4DD'
     },
-    good: {
-        main: '#0A7B3E',
-        light: '#CEE5D8'
-    },
     minimal: {
         main: '#56CCF2',
         light: '#DAF2FD'
@@ -75,7 +71,10 @@ const priority: Record<Priority, { main: string; light: string }> = {
     neutral: {
         main: grays.g5,
         light: grays.g8
-    },
+    }
+}
+
+const graphic: Record<Graphically, { main: string; light: string }> = {
     pink: {
         main: '#D467A8',
         light: '#F4D9E9'
@@ -87,6 +86,34 @@ const priority: Record<Priority, { main: string; light: string }> = {
     brown: {
         main: '#83471E',
         light: '#DAC7BB'
+    },
+    red: {
+        main: '#D84315',
+        light: '#FFCDBE'
+    },
+    orange: {
+        main: '#FF9900',
+        light: '#FFE1B4'
+    },
+    yellow: {
+        main: '#E7BF11',
+        light: '#FFF7D5'
+    },
+    lightgreen: {
+        main: '#8BC34A',
+        light: '#E9F4DD'
+    },
+    green: {
+        main: '#0A7B3E',
+        light: '#CEE5D8'
+    },
+    blue: {
+        main: '#56CCF2',
+        light: '#DAF2FD'
+    },
+    gray: {
+        main: grays.g5,
+        light: grays.g8
     }
 }
 
@@ -115,6 +142,7 @@ export default {
     app,
     priority,
     feedback,
+    graphic,
     criticality,
     neutral,
     grays,
