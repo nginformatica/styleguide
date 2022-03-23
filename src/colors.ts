@@ -30,7 +30,7 @@ const grays = {
     g6: '#e0e0e0',
     g7: '#eeeeee',
     g8: '#f5f5f5',
-    g9: '#fafafa',
+    g9: '#fafafa'
 }
 
 // Actions
@@ -47,14 +47,14 @@ const feedback: Record<Feedback, string> = {
     info: '#2F80ED'
 }
 
-const priority: Record<Priority, { main: string, light: string }> = {
+const priority: Record<Priority, { main: string; light: string }> = {
     critical: {
         main: '#D84315',
         light: '#FFCDBE'
     },
     high: {
         main: '#FF9900',
-        light: '#FFE1B4',
+        light: '#FFE1B4'
     },
     medium: {
         main: '#E7BF11',
@@ -64,6 +64,10 @@ const priority: Record<Priority, { main: string, light: string }> = {
         main: '#8BC34A',
         light: '#E9F4DD'
     },
+    good: {
+        main: '#0A7B3E',
+        light: '#CEE5D8'
+    },
     minimal: {
         main: '#56CCF2',
         light: '#DAF2FD'
@@ -71,6 +75,18 @@ const priority: Record<Priority, { main: string, light: string }> = {
     neutral: {
         main: grays.g5,
         light: grays.g8
+    },
+    pink: {
+        main: '#D467A8',
+        light: '#F4D9E9'
+    },
+    purple: {
+        main: '#7B4299',
+        light: '#D7C6E0'
+    },
+    brown: {
+        main: '#83471E',
+        light: '#DAC7BB'
     }
 }
 
@@ -84,7 +100,7 @@ const app = {
     border: grays.g6,
     background: {
         main: '#F6F7FF',
-        lighter: grays.g8,
+        lighter: grays.g8
     },
     text: {
         main: grays.g0,

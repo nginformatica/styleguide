@@ -10,8 +10,12 @@ export enum Priority {
     high = 'high',
     medium = 'medium',
     low = 'low',
+    good = 'good',
     minimal = 'minimal',
-    neutral = 'neutral'
+    neutral = 'neutral',
+    pink = 'pink',
+    purple = 'purple',
+    brown = 'brown'
 }
 
 export enum Criticality {

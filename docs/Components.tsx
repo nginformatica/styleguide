@@ -4,7 +4,7 @@ import SnackbarContent from '@material-ui/core/SnackbarContent'
 import { WithTheme, Theme } from '../src'
 
 interface IProps {
-    kind: 'critical' | 'medium' | 'high' | 'minimal' | 'low'
+    kind: 'critical' | 'medium' | 'high' | 'minimal' | 'low' | 'good'| 'pink' | 'purple' | 'brown' | 'neutral'
     tag?: string
     children: React.ReactNode
 }
@@ -35,24 +35,24 @@ const CardTagStyled = styled('div')<WithTheme<IProps>>(
     })
 )
 
-const CardTagStyledPattern = styled(CardStyled)`
-    & > * {
-        z-index: 1;
-        position: relative;
-    }
-    ::before {
-        z-index: 0;
-        content: '';
-        opacity: 0.5;
-        display: block;
-        position: absolute;
-        background-image: url("${require('./pattern.png')}");
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-    }
-`
+// const CardTagStyledPattern = styled(CardStyled)`
+//     & > * {
+//         z-index: 1;
+//         position: relative;
+//     }
+//     ::before {
+//         z-index: 0;
+//         content: '';
+//         opacity: 0.5;
+//         display: block;
+//         position: absolute;
+//         background-image: url("${require('./pattern.png')}");
+//         width: 100%;
+//         height: 100%;
+//         top: 0;
+//         left: 0;
+//     }
+// `
 
 const Bold = styled('div')((p: Theme) => ({
     color: p.theme.colors.primary.main,

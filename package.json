@@ -1,6 +1,6 @@
 {
   "name": "nginformatica-styleguide",
-  "version": "0.0.1-alpha.2",
+  "version": "0.0.1-alpha.3",
   "description": "A minimalist styleguide in NGInformatica apps",
   "main": "lib/index.js",
   "typings": "./index.d.ts",
