@@ -19,7 +19,7 @@
     "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
     "publish": "node pre-publish && npm run build && npm publish lib",
     "publish:alpha": "node pre-publish && npm run build && npm publish lib --tag alpha",
-    "release": "npm publish lib --scope=@nginformatica --access public",
+    "release": "npm publish ./lib --scope=@nginformatica --access public",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
