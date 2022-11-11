@@ -15,7 +15,7 @@ const customTheme = create({
 
     brandTitle: 'NGInformatica Styles',
     brandUrl: 'https://github.com/nginformatica/styleguide',
-    // brandImage: require('./assets/logo.png')
+    brandImage: require('./assets/logo.png')
 })
 
 addParameters({
