@@ -8,12 +8,13 @@ interface IProps {
     children: React.ReactNode
 }
 
-export default ({ theme, children }: IProps) =>
-  <StylesProvider injectFirst>
-    <StyledThemeProvider theme={ theme }>
-      <MuiThemeProvider theme={ theme }>
-        <CssBaseline />
-        { children }
-      </MuiThemeProvider>
-    </StyledThemeProvider>
-  </StylesProvider>
+export default ({ theme, children }: IProps) => (
+    <StylesProvider injectFirst>
+        <StyledThemeProvider theme={theme}>
+            <MuiThemeProvider theme={theme}>
+                <CssBaseline />
+                {children}
+            </MuiThemeProvider>
+        </StyledThemeProvider>
+    </StylesProvider>
+)
