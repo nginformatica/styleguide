@@ -1,6 +1,6 @@
 import { configure, addParameters, addDecorator } from '@storybook/react'
 import { create } from '@storybook/theming/create'
-import { muiThemeOptions, theme } from '../src'
+import { muiThemeOptions, theme } from '../src/styles'
 import { ThemeProvider } from 'flipper-ui'
 import { StylesProvider } from '@material-ui/core/styles'
 import { ThemeProvider as StyledThemeProvider } from 'styled-components'
@@ -15,7 +15,7 @@ const customTheme = create({
 
     brandTitle: 'NGInformatica Styles',
     brandUrl: 'https://github.com/nginformatica/styleguide',
-    brandImage: require('./assets/logo.png')
+    brandImage: require('../src/assets/logo.png')
 })
 
 addParameters({
@@ -36,7 +36,7 @@ addDecorator((storyFn) => (
     </StylesProvider>
 ))
 
-configure(require.context('../docs', true, /\.stories\.(mdx|tsx?)$/), module)
+configure(require.context('../src', true, /\.stories\.(mdx|tsx?)$/), module)
 
 export const parameters = {
     actions: { argTypesRegex: '^on[A-Z].*' },
