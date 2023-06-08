@@ -1,0 +1,62 @@
+<Meta title="Home" />
+
+# Getting Started
+
+This guide is for patterns of color in the **NGInformatica Apps**, the colors will
+be provided by a `theme provider` and the developer will access it with `theme.colors.NAME`.
+
+For more details see the example in the end of doc.
+
+## Usage with theme provider
+
+See below the implementation of the `card with tints` using **Typescript**
+
+```tsx
+import { muiThemeOptions, theme, WithTheme } from 'nginformatica-styleguide'
+import { ThemeProvider as StyledThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'flipper-ui'
+
+interface IProps {
+    kind: 'critical' | 'medium' | 'high' | 'minimal' | 'low'
+    tag?: string
+    children: React.ReactNode
+}
+
+const CardStyled = styled('div')<WithTheme<IProps>>(
+    ({ theme, kind }: WithTheme<IProps>) => ({
+        padding: '0.5rem',
+        borderLeft: `4px solid ${theme.colors.priority[kind].main}`,
+        backgroundColor: theme.colors.priority[kind].light,
+        width: '144px',
+        height: '80px',
+        margin: '0 1rem 1rem 0',
+        borderRadius: '4px',
+        position: 'relative',
+    })
+)
+
+const Bold = styled('div')(({ theme }: ITheme) => ({
+    color: theme.colors.primary,
+    fontWeight: 600,
+}))
+
+const Desc = styled('div')(({ theme }: ITheme) => ({
+    color: theme.colors.main.primary,
+    fontSize: '0.75rem',
+}))
+
+const Card = (props: IProps) => (
+    <CardStyled kind={props.kind}>
+        <Bold>{props.tag}</Bold>
+        <Desc>{`A ${props.kind} situation`}</Desc>
+    </CardStyled>
+)
+
+const App = () => (
+    <StyledThemeProvider theme={theme}>
+        <ThemeProvider options={muiThemeOptions}>
+            <Card kind="critical" tag="#00005" />
+        </ThemeProvider>
+    </StyledThemeProvider>
+)
+```
