@@ -7,6 +7,16 @@
     <h2 style='font-family: sans-serif;'> STYLEGUIDE </h2>
 </div>
 
+## This repository is migrating its functionalities to flipper-ui, in order to centralize the repositories and not duplicate dependencies. It will be deleted when all products that use this repository are migrated to use colors through flipper-ui.
+
+```ts
+before the migration:
+import { theme } from 'nginformatica-styleguide'
+
+after the migration:
+import { theme } from 'flipper-ui/theme'
+```
+
 A repository to center and document, initially, the colors of the NGInformatica Apps.
 
 ## :package: `Install` 
