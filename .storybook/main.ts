@@ -11,7 +11,8 @@ const config: StorybookConfig = {
     },
     addons: [
         '@storybook/addon-essentials',
-        '@storybook/addon-styling-webpack'
+        '@storybook/addon-styling-webpack',
+        '@storybook/addon-themes'
     ],
     docs: {
         autodocs: true
