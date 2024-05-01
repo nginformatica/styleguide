@@ -1,14 +1,18 @@
 import React from 'react'
 import { Button } from 'flipper-ui'
+import { Photo } from 'flipper-ui/icons'
 import type { Meta, StoryObj } from '@storybook/react'
 import { Teste as ThisButton } from './Button'
+import { theme } from 'flipper-ui/theme'
+
+const { secondary, primary } = theme.colors
 
 const meta: Meta<typeof Button> = {
     title: 'Mobile/Components/Actions/Button',
-    component: Button
-    // argTypes: {
-    //     backgroundColor: { control: 'color' }
-    // }
+    component: Button,
+    argTypes: {
+        color: { control: 'color' }
+    }
 }
 
 export default meta
@@ -21,9 +25,11 @@ export const button: Story = {
             <>
                 <div
                     style={{
-                        border: '1px solid red'
+                        border: '1px solid red',
+                        backgroundColor: secondary.main
                     }}>
                     <Button margin='12px'>Button Flipper</Button>
+                    <Photo htmlColor={primary.main} />
                 </div>
                 <ThisButton />
             </>
