@@ -1,5 +1,5 @@
 {
-	"name": "ng-design-system",
+	"name": "nginformatica-styleguide",
 	"version": "1.0.3",
 	"description": "The Design System for the NG Saas Products",
 	"main": "lib/index.js",
