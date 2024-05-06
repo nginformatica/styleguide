@@ -1,32 +1,8 @@
-import { Meta, Canvas, ColorPalette, ColorItem } from '@storybook/blocks';
-import * as ColorsStories from './Colors.stories';
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
 
-<Meta of={ColorsStories} />
-
-## Usage
-
-Here is a quick example to set the ThemeProvider:
-
-```tsx
-import React from 'react'
-import { Button } from 'flipper-ui'
-import { ThemeProviderFlipper } from 'flipper-ui'
-import { ThemeProvider } from 'styled-components'
-import { muiThemeOptions, theme } from '@/theme'
-
-const App = () => (
-    <ThemeProvider theme={ theme }>
-        <ThemeProviderFlipper options={ muiThemeOptions }>
-            <Button color="primary" />
-        </ThemeProviderFlipper>
-    </ThemeProvider>
-)
-```
-
-<Canvas of={ColorsStories.colors} />
+<Meta title="Web/Design/Colors" />
 
 ## Colors
-
 
 <ColorPalette>
     <ColorItem
