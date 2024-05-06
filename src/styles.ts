@@ -33,3 +33,17 @@ export const Text = styled.h3`
     text-align: center;
     margin: 6px 0 0 0;
 `
+
+export const WrapperNotification = styled.div`
+    height: 200px;
+`
+
+export const WrapperButton = styled.button`
+    margin: 5px 10px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: #152849;
+    color: #ffffff;
+    cursor: pointer;
+`
