@@ -1,0 +1,22 @@
+import type { StorybookConfig } from '@storybook/react-webpack5'
+
+const config: StorybookConfig = {
+    framework: '@storybook/react-webpack5',
+    stories: [
+        '../src/**/**/*.mdx',
+        '../src/**/**/*.stories.@(js|jsx|mjs|ts|tsx)'
+    ],
+    features: {
+        storyStoreV7: true
+    },
+    addons: [
+        '@storybook/addon-essentials',
+        '@storybook/addon-styling-webpack',
+        '@storybook/addon-themes'
+    ],
+    docs: {
+        autodocs: true
+    }
+}
+
+export default config

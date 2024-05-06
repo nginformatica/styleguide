@@ -1,0 +1,61 @@
+import { Meta } from '@storybook/blocks';
+import flipper from '../../../assets/flipper.png'
+import charts from '../../../assets/charts.png'
+import frontendcore from '../../../assets/core.png'
+
+<Meta title="Web/Introduction" />
+
+## DESENVOLVIMENTO WEB
+
+### Introdução
+
+A fim de padronizar as cores, tipografias, ícones e componentes utilizados nos produtos SaaS da NG, as equipes de produto juntamente com a equipe de pesquisa e desenvolvimento desenvolveram pacotes open source e privados para atender as necessidades das aplicações.
+
+### Pacotes Internos
+
+Entre os projetos desenvolvidos, encontram-se:
+
+- biblioteca de gráficos, como o **amazing-react-charts**;
+- biblioteca de componentes visuais, como o **flipper-ui**;
+- biblioteca de componentes com regras de negócio específicas para os produtos SaaS, como o **frontend-core**.
+
+#### Open Source
+
+<div style={{ display: "flex", justifyContent: "space-between" }}>
+    <div style={{ width: "35%", textAlign: "justify", margin: "auto 0" }}>
+        O **[amazing-react-charts](https://amazing-react-charts.ngi.com.br/)** é uma biblioteca de gráficos em canvas, desenvolvida com base nos gráficos do [echarts](https://echarts.apache.org/en/index.html) e echarts-for-react. Os gráficos desenvolvidos foram adaptados para atender as necessidades das aplicações para que a apresentação dos dados dos usuários possa ser feita de inúmeras formas.
+
+        Aqui você encontra o repositório do [GitHub](https://github.com/nginformatica/amazing-react-charts) e o pacote [npm](https://www.npmjs.com/package/amazing-react-charts?activeTab=versions).
+    </div>
+    <div style={{ width: "55%" }}>
+        <img src={charts} width="100%" />
+    </div>
+</div>
+
+<br />
+<br />
+
+<div style={{ display: "flex", justifyContent: "space-between" }}>
+    <div style={{ width: "35%", textAlign: "justify", margin: "auto 0" }}>
+        O **[flipper-ui](https://flipper-ui.ngi.com.br/)** é uma biblioteca de componentes visuais desenvolvida com React e tem como base os componentes do [@mui](https://mui.com/) (biblioteca de componentes React open source que implementa o Material Design do Google). O flipper-ui transforma os componentes do @mui de forma que fiquem padronizados com as cores, espaçamentos e tipografias estipuladas para as aplicações.
+
+        Aqui você encontra o repositório do [GitHub](https://github.com/nginformatica/flipper-ui) e o pacote [npm](https://www.npmjs.com/package/flipper-ui).
+    </div>
+    <div style={{ width: "55%" }}>
+        <img src={flipper} width="100%" />
+    </div>
+</div>
+
+#### Privados
+
+<div style={{ display: "flex", justifyContent: "space-between" }}>
+    <div style={{ width: "35%", textAlign: "justify", margin: "auto 0" }}>
+        O **[frontend-core](https://frontend.ngi.com.br/)** é uma biblioteca interna que atende apenas as especifidades em comum das aplicações SaaS da NG, como por exemplo, regras de negócio específicas necessárias para o funcionamento das aplicações, sejam elas inputs de pesquisa, calendários, sistemas de notificação, inputs de senha, entre outros.
+
+
+        Caso você tenha acesso, aqui se encontra o repositório no [Azure](https://dev.azure.com/nginformatica/Pesquisa%20e%20Desenvolvimento/_git/frontend-core).
+    </div>
+    <div style={{ width: "55%" }}>
+        <img src={frontendcore} width="100%" />
+    </div>
+</div>

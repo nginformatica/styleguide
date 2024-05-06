@@ -1,0 +1,210 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as UsageStories from './UsageGuide.stories';
+
+<Meta title="Web/Usage Guide" />
+
+## DESENVOLVIMENTO WEB
+
+[amazing-react-charts](#amazing-react-charts)
+&nbsp;|&nbsp;
+[flipper-ui](#flipper-ui)
+&nbsp;|&nbsp;
+[frontend-core](#frontend-core)
+
+## Usage Guide
+
+Abaixo você encontrará um guia rápido de instalação e utilização de cada biblioteca.
+
+### amazing-react-charts
+
+**1.** Instale o pacote utilizando `npm` ou `yarn`: 
+
+```sh
+npm install --save amazing-react-charts
+```
+
+```sh
+yarn add amazing-react-charts
+```
+
+**2.** Importe o gráfico desejado e utilize desta forma:
+
+<div style={{ display: "flex", justifyContent: "space-between" }}>
+    <div style={{ width: "51%"}}>
+        ```ts
+        import { DonutChart } from 'amazing-react-charts'
+
+        <DonutChart
+            title="Donut Chart"
+            legendPosition="outside"
+            resultFormatType="percent"
+            center={[ '50%', '50%' ]}
+            donutRadius={[ '58%', '70%' ]}
+            colors={[
+                'red',
+                'orange',
+                'yellow',
+                'green'
+            ]}
+            data={[
+            {
+                name: 'Emergencial',
+                value: 120
+            },
+            {
+                name: 'Alta',
+                value: 234
+            },
+            {
+                name: 'Média',
+                value: 500
+            },
+            {
+                name: 'Baixa',
+                value: 440
+            }
+            ]}
+            toolboxTooltip={{
+                saveAsImage: {
+                    title: 'Save as Image'
+                }
+            }}
+            tooltip={{
+                label: 'Criticidade',
+                result: 'Total de SSs'
+            }}
+            onClickBar={function noRefCheck(){}}
+        />
+        ```
+    </div>
+
+    <div style={{ width: "48%"}}>
+        <Canvas of={UsageStories.donutChart} />
+    </div>
+</div>
+
+### flipper-ui
+
+**1.** Instale o pacote utilizando `npm` ou `yarn`: 
+
+```sh
+npm install --save flipper-ui
+```
+
+```sh
+yarn add flipper-ui
+```
+
+**2.** Configure o `ThemeProvider` para poder utilizar todas as cores do tema:
+
+```tsx
+import React from 'react'
+import { ThemeProviderFlipper } from 'flipper-ui'
+import { ThemeProvider } from 'styled-components'
+import { muiThemeOptions, theme } from 'flipper-ui/theme'
+
+const App = () => (
+    <ThemeProvider theme={ theme }>
+        <ThemeProviderFlipper options={ muiThemeOptions }>
+            {children}
+        </ThemeProviderFlipper>
+    </ThemeProvider>
+)
+```
+
+**3.** Para utilizar os componentes, faça conforme abaixo:
+
+<div style={{ display: "flex", justifyContent: "space-between" }}>
+    <div style={{ width: "51%"}}>
+        ```tsx
+        import React from 'react'
+        import { Button } from 'flipper-ui'
+
+        const Button = () => (
+            <Button color='primary'>
+                Este é um botão!
+            </Button>
+        )
+        ```
+    </div>
+
+    <div style={{ width: "48%"}}>
+        <Canvas of={UsageStories.flipperButton} />
+    </div>
+</div>
+
+**4.** Para utilizar cores e ícones, faça conforme abaixo:
+
+<div style={{ display: "flex", justifyContent: "space-between" }}>
+    <div style={{ width: "51%"}}>
+        ```tsx
+        import React from 'react'
+        import { PhotoCamera } from 'flipper-ui/icons' 
+        import { theme } from 'flipper-ui/theme'
+
+        const { primary } = theme.colors
+
+        const Icon = () => (
+            <PhotoCamera htmlColor={ primary.main } />
+        )
+        ```
+    </div>
+
+    <div style={{ width: "48%"}}>
+        <Canvas of={UsageStories.flipperIcon} />
+    </div>
+</div>
+
+### frontend-core
+
+**1.** Instale o pacote via ssh do azure, onde o número seguido do `#/release` é a versão atual do pacote:
+
+```sh
+"ngi-core": "git+ssh://git@ssh.dev.azure.com:v3/nginformatica/Pesquisa%20e%20Desenvolvimento/frontend-core#release/0.4.3",
+```
+
+**2.** Importe o componente desejado e utilize conforme estipulado:
+
+<div style={{ display: "flex", justifyContent: "space-between" }}>
+    <div style={{ width: "51%"}}>
+        ```tsx
+        import React from 'react'
+        import { Button } from 'flipper-ui'
+        import { Notification, useNotification } from 'ngi-core'
+        import { theme } from 'flipper-ui/theme'
+
+        const { primary } = theme.colors
+
+        const messageExtractor = (arg: Error | string) =>
+            typeof arg === 'string' ? arg : arg.message
+
+        const Notification = () => {
+            const [notify] = useNotification()
+
+            const variants: TNotificationType[] = [
+                'error',
+                'info',
+                'success',
+                'warning'
+            ]
+
+            return (
+                <Notification messageExtractor={messageExtractor}>
+                    {variants.map(variant => (
+                        <Button
+                            key={variant}
+                            onClick={
+                                () => notify(variant, 'message')}>
+                            {variant}
+                        </Button>
+                    ))}
+                </Notification>
+            )
+        }
+        ```
+    </div>
+
+    <div style={{ width: "48%"}}>
+        <Canvas of={UsageStories.notification} />
+    </div>
+</div>
