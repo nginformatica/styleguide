@@ -15,7 +15,7 @@
 		"lint": "eslint -c .eslintrc.js 'src/**/*.{ts,tsx}'",
 		"lint:fix": "eslint -c .eslintrc.js --fix 'src/**/*.{ts,tsx}'",
 		"lint:quiet": "eslint --quiet .eslintrc.js 'src/**/*.{ts,tsx}'",
-		"docs:build": "build-storybook --docs -o public",
+		"docs:build": "storybook build -o docs public",
 		"build": "node pre-publish && npm run build:types && npm run build:js",
 		"build:types": "tsc --emitDeclarationOnly",
 		"build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
