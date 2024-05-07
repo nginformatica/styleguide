@@ -8,8 +8,6 @@ import * as UsageStories from './UsageGuide.stories';
 [amazing-react-charts](#amazing-react-charts)
 &nbsp;|&nbsp;
 [flipper-ui](#flipper-ui)
-&nbsp;|&nbsp;
-[frontend-core](#frontend-core)
 
 ## Usage Guide
 
@@ -152,59 +150,5 @@ const App = () => (
 
     <div style={{ width: "48%"}}>
         <Canvas of={UsageStories.flipperIcon} />
-    </div>
-</div>
-
-### frontend-core
-
-**1.** Instale o pacote via ssh do azure, onde o número seguido do `#/release` é a versão atual do pacote:
-
-```sh
-"ngi-core": "git+ssh://git@ssh.dev.azure.com:v3/nginformatica/Pesquisa%20e%20Desenvolvimento/frontend-core#release/0.4.3",
-```
-
-**2.** Importe o componente desejado e utilize conforme estipulado:
-
-<div style={{ display: "flex", justifyContent: "space-between" }}>
-    <div style={{ width: "51%"}}>
-        ```tsx
-        import React from 'react'
-        import { Button } from 'flipper-ui'
-        import { Notification, useNotification } from 'ngi-core'
-        import { theme } from 'flipper-ui/theme'
-
-        const { primary } = theme.colors
-
-        const messageExtractor = (arg: Error | string) =>
-            typeof arg === 'string' ? arg : arg.message
-
-        const Notification = () => {
-            const [notify] = useNotification()
-
-            const variants: TNotificationType[] = [
-                'error',
-                'info',
-                'success',
-                'warning'
-            ]
-
-            return (
-                <Notification messageExtractor={messageExtractor}>
-                    {variants.map(variant => (
-                        <Button
-                            key={variant}
-                            onClick={
-                                () => notify(variant, 'message')}>
-                            {variant}
-                        </Button>
-                    ))}
-                </Notification>
-            )
-        }
-        ```
-    </div>
-
-    <div style={{ width: "48%"}}>
-        <Canvas of={UsageStories.notification} />
     </div>
 </div>
