@@ -185,5 +185,5 @@ module.exports = {
         ...rulesTypescript
     },
     plugins: ['@typescript-eslint', 'import', '@stylistic'],
-    ignorePatterns: ['.eslintrc.js', 'pre-publish.js']
+    ignorePatterns: ['.eslintrc.js']
 }

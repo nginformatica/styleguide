@@ -1,5 +1,2 @@
-/node_modules/
-/lib/
-/public/
-
-*storybook.log
+node_modules/
+docs

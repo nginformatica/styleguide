@@ -1,9 +1,8 @@
 {
-	"name": "nginformatica-styleguide",
-	"version": "1.0.4",
+	"name": "ng-design-system",
+	"version": "1.0.5",
 	"description": "The Design System for the NG Saas Products",
-	"main": "lib/index.js",
-	"author": "void",
+	"author": "NG",
 	"license": "MIT",
 	"resolutions": {
 		"wrap-ansi": "7.0.0"
@@ -11,15 +10,11 @@
 	"scripts": {
 		"start": "sb dev -p 6006",
 		"type-check": "tsc --noEmit",
+		"docs:build": "sb build -o docs",
 		"format": "prettier -w 'src/**/*.{ts,tsx}'",
 		"lint": "eslint -c .eslintrc.js 'src/**/*.{ts,tsx}'",
 		"lint:fix": "eslint -c .eslintrc.js --fix 'src/**/*.{ts,tsx}'",
-		"lint:quiet": "eslint --quiet .eslintrc.js 'src/**/*.{ts,tsx}'",
-		"docs:build": "storybook build -o docs public",
-		"build": "node pre-publish && npm run build:types && npm run build:js",
-		"build:types": "tsc --emitDeclarationOnly",
-		"build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
-		"npm:release": "npm publish ./lib --scope=@nginformatica --access public"
+		"lint:quiet": "eslint --quiet .eslintrc.js 'src/**/*.{ts,tsx}'"
 	},
 	"dependencies": {},
 	"devDependencies": {
@@ -57,8 +52,5 @@
 		"styled-components": "6.1.9",
 		"typescript": "5.4.5",
 		"webpack": "5.91.0"
-	},
-	"publishConfig": {
-		"access": "public"
 	}
 }
