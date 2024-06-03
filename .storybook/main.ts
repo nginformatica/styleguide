@@ -6,17 +6,12 @@ const config: StorybookConfig = {
         '../src/**/**/*.mdx',
         '../src/**/**/*.stories.@(js|jsx|mjs|ts|tsx)'
     ],
-    features: {
-        storyStoreV7: true
-    },
     addons: [
         '@storybook/addon-essentials',
         '@storybook/addon-styling-webpack',
-        '@storybook/addon-themes'
-    ],
-    docs: {
-        autodocs: true
-    }
+        '@storybook/addon-themes',
+        '@storybook/addon-webpack5-compiler-babel'
+    ]
 }
 
 export default config
