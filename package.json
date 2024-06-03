@@ -4,9 +4,6 @@
 	"description": "The Design System for the NG Saas Products",
 	"author": "NG",
 	"license": "MIT",
-	"resolutions": {
-		"wrap-ansi": "7.0.0"
-	},
 	"scripts": {
 		"start": "sb dev -p 6006",
 		"type-check": "tsc --noEmit",
