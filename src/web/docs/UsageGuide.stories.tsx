@@ -1,7 +1,7 @@
 import React from 'react'
+import { PhotoCamera } from '@mui/icons-material'
 import { DonutChart } from 'amazing-react-charts'
 import { Button } from 'flipper-ui'
-import { PhotoCamera } from 'flipper-ui/icons'
 import type { Meta } from '@storybook/react'
 import { theme } from 'flipper-ui/theme'
 

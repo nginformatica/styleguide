@@ -2,8 +2,7 @@ import React from 'react'
 import { Preview } from '@storybook/react'
 import { withThemeFromJSXProvider } from '@storybook/addon-themes'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
-import { ThemeProviderFlipper } from 'flipper-ui'
-import { muiThemeOptions, theme } from 'flipper-ui/theme'
+import { ThemeProviderFlipper, muiThemeOptions, theme } from 'flipper-ui/theme'
 
 const GlobalStyles = createGlobalStyle`
   body {
